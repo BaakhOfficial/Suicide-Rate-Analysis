@@ -7,3 +7,8 @@ What you can find in that repository
 
 1. Data - Originals of used datasets
 2. PostgreSQL - files to use for Postgre. Scripts and database backup
+
+USA Insights:
+Female population in USA is almost always bigger than male.But that trend is going down
+Male have 3.11-4.52 times more likelyhood of death from suicide. Although that difference is slowly creeping down
+Amount of female suicide is growing from 90's much faster, than male suicide
