@@ -60,3 +60,69 @@ from usa_sex_dependency_v usdv;
 -- 2) I think something happened in 1986 for everyone, 1981 for females, 2004 for females, 2011. needs further research
 -- 3) Male have 3.11-4.52 times more likelyhood of death from suicide. Although that difference is slowly creeping down
 -- 4) Amount of female suicide is growing from 90's much faster, than male suicide
+
+-- Now we will check age difference
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' 
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '5-14'
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '15-24'
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '25-34'
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '35-54'
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '55-74'
+
+select *
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '75+'
+
+select country, year, sum(suicides_no) as suicides_no, sum(population) as population,
+		round(sum(suicides_no) * 100./sum(population), 5)as suicides_in_population
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '5-14'
+group by country, year, age_gap
+
+select country, year, sum(suicides_no) as suicides_no, sum(population) as population,
+		round(sum(suicides_no) * 100./sum(population), 5)as suicides_in_population
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '15-24'
+group by country, year, age_gap
+
+select country, year, sum(suicides_no) as suicides_no, sum(population) as population,
+		round(sum(suicides_no) * 100./sum(population), 5)as suicides_in_population
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '25-34'
+group by country, year, age_gap
+
+select country, year, sum(suicides_no) as suicides_no, sum(population) as population,
+		round(sum(suicides_no) * 100./sum(population), 5)as suicides_in_population
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '35-54'
+group by country, year, age_gap
+
+select country, year, sum(suicides_no) as suicides_no, sum(population) as population,
+		round(sum(suicides_no) * 100./sum(population), 5)as suicides_in_population
+from who_suicide_statistics wss 
+where country = 'United States of America' and age_gap = '75+'
+group by country, year, age_gap
+
+-- 1) At the age of 5-14 more males than females. In the range from 15 to 74 years difference in population almost neglegable
+-- But there's almost twice more women in age 75+ then man
+-- 2) Since 2007 suicides from 5 to 14 years multiplied up to 2 times.
+-- 3) At 75+ suicide rate growing very slowly
+-- 4) 1999 - 2004 are the best years in our statistic in every age group or sex category
