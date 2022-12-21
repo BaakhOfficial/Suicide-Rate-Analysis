@@ -121,8 +121,29 @@ from who_suicide_statistics wss
 where country = 'United States of America' and age_gap = '75+'
 group by country, year, age_gap
 
--- 1) At the age of 5-14 more males than females. In the range from 15 to 74 years difference in population almost neglegable
--- But there's almost twice more women in age 75+ then man
--- 2) Since 2007 suicides from 5 to 14 years multiplied up to 2 times.
--- 3) At 75+ suicide rate growing very slowly
--- 4) 1999 - 2004 are the best years in our statistic in every age group or sex category
+-- To summarize facts we got from USA data in that two separate tests:
+/*
+1) Female population in USA is almost always bigger than male. But that trend is going down
+2) I think something happened in 1986 for everyone, 1981 for females, 2004 for females, 2011. needs further research
+3) Male have 3.11-4.52 times more likelyhood of death from suicide. Although that difference is slowly creeping down
+4) Amount of female suicide is growing from 90's much faster, than male suicide
+5) At the age of 5-14 there more males than females. In the range from 15 to 74 years difference in population almost neglegable
+	BUT there's almost twice more women in age 75+ then man.That means we have a problem in that social group.
+	That problem might not meet our object of research, but that's an interesting data we can share
+6) Since 2007 to 2016 suicides from 5 to 14 years multiplied up to 2 times.
+7) At 75+ suicide rate growing very slowly
+8) 1999 - 2004 are the best years in our statistic in every age group or sex category
+
+I must underline that we are using relative numbers, because they are more representative. And facts are found on that numbers
+(For example amount of suicides on 1000 people)
+We will try to find exact reasons of that facts, but that needs more data
+
+We will come back to that data later and find exact reasons for our facts after research in other countries
+*/
+
+
+
+
+
+
+
