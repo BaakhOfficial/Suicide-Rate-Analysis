@@ -1,5 +1,5 @@
 ![GitHub Logo](https://github.com/BaakhOfficial/suicide-research/blob/main/header.png)
-# Suicide per capita study
+# Suicide rate analysis
 Here I am researching data, trying to find a details about amount of suicides in population. You can see data I am using, ways I am interpreting it, results and conclusions I am making on the way
 
 Each country is research with a different method for representations of my skills and practice
