@@ -8,15 +8,52 @@ CREATE SCHEMA IF NOT EXISTS mvp_schema;
 SET search_path TO mvp_schema;
 
 CREATE TABLE IF NOT EXISTS countries (
-	coutry_code char(3) /*ISO 3166-1 alpha-3*/ PRIMARY,
-	country_name varchar(SELECT Length('the United Kingdom of Great Britain and Northern Ireland')) NOTNULL,
+	coutry_code char(3) /*ISO 3166-1 alpha-3*/ PRIMARY KEY,
+	country_name varchar(100) NOT NULL
 )
+
+INSERT INTO countries VALUES
+('ARG', 'Argentina'),
+('AUT', 'Austria'),
+('BLR', 'Belarus'),
+('BEL', 'Belgium'),
+('CRI', 'Costa Rica'),
+('DNK', 'Denmark'),
+('DOM', 'Dominican Republic'),
+('SLV', 'El Salvador'),
+('FIN', 'Finland'),
+('GRC', 'Greece'),
+('LUX', 'Luxembourg'),
+('MDA', 'Moldova'),
+('NOR', 'Norway'),
+('PER', 'Peru'),
+('RUS', 'Russian Federation'),
+('SWE', 'Sweden'),
+('THA', 'Thailand'),
+('USA', 'United States');
+
 
 CREATE TABLE IF NOT EXISTS series_list (
 	series_id serial PRIMARY KEY,
 	series_name varchar(100) NOT NULL
 );
 
+INSERT INTO series_list ("series_name") VALUES
+('Birth rate, crude (per 1,000 people)'),
+('Control of Corruption  Percentile Rank'),
+('Death rate, crude (per 1,000 people)'),
+('Domestic general government health expenditure per capita (current US$)'),
+('GDP per capita (current US$)'),
+('Income share held by highest 10%'),
+('Land Surface Temperature'),
+('Life expectancy at birth, female (years)'),
+('Life expectancy at birth, male (years)'),
+('Life expectancy at birth, total (years)'),
+('Social contributions (% of revenue)'),
+('Suicide mortality rate (per 100,000 population)'),
+('Suicide mortality rate, female (per 100,000 female population)'),
+('Suicide mortality rate, male (per 100,000 male population)'),
+('Voice and Accountability  Percentile Rank');
 
 CREATE TEMP TABLE coltable (
 "country_code" varchar(100),
